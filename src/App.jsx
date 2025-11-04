@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -18,7 +18,7 @@ function App() {
     <>
      <ToastContainer position="top-center" autoClose={2000} theme="colored" />
       <AuthProvider >
-        <BrowserRouter>
+        <HashRouter>
           <NavBar /> {/* NavBar ko routes ke upar add karo */}
           <Routes>
             <Route path='/' element={<Home />} />
@@ -28,7 +28,7 @@ function App() {
             <Route path='/MainPage' element={<MainPage />} />
             <Route path='/Login' element={<Login />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </AuthProvider>
     </>
   )
