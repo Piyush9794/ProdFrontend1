@@ -11,8 +11,8 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
   // Temporary check - add this in your AuthProvider
-  console.log("BASE_URL:", import.meta.env.VITE_BASE_URL);
-  console.log("All env variables:", import.meta.env);
+  // console.log("BASE_URL:", import.meta.env.VITE_BASE_URL);
+  // console.log("All env variables:", import.meta.env);
   // ✅ 1. Check saved login data (refresh hone ke baad bhi login rahe)
   useEffect(() => {
     const savedToken = localStorage.getItem("userToken");

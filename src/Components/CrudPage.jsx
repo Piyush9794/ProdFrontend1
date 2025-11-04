@@ -7,8 +7,8 @@ const CrudPage = () => {
   const GetallUsers = async (data) => {
     try {
       const res = await axios.get(`${BASE_URL}/getUser`, data);
-      console.log("✅ Server Response:", res.data.result);
-      console.log("✅ Server Id:", res.data.result._id);
+      // console.log("✅ Server Response:", res.data.result);
+      // console.log("✅ Server Id:", res.data.result._id);
       setUsers(res.data.result);
     } catch (error) {
       console.log(error);
@@ -47,8 +47,8 @@ const CrudPage = () => {
         }
       }
     } catch (error) {
-      console.error("Delete error:", error);
-      Swal.fire("Error!", "Something went wrong.", "error");
+      // console.error("Delete error:", error);
+      Swal.fire("Error!", "Something went wrong.", error);
     }
   };
 
