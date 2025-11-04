@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from 'react-router-dom';
+
 // import "bootstrap/dist/css/bootstrap.min.css";
 import { Carousel, Card, Button, Container, Row, Col } from "react-bootstrap";
 import NavBar from "./NavBar";
