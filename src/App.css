@@ -1,0 +1,54 @@
+*{
+    font-family: cursive;
+}   
+
+/* Social icon container (optional) */
+.footer-social {
+  display: inline-flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* Icon base style */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;           /* icon box size - adjust as needed */
+  height: 36px;
+  font-size: 18px;       /* icon glyph size */
+  border-radius: 6px;    /* small rounded bg if you want */
+  transition: transform 220ms cubic-bezier(.2,.8,.2,1), /* smooth scale */
+              box-shadow 220ms cubic-bezier(.2,.8,.2,1),
+              opacity 220ms;
+  transform-origin: center;
+  cursor: pointer;
+  color: rgba(255,255,255,0.9); /* icon color */
+  background: transparent;      /* or rgba(...) if you want bg */
+  text-decoration: none;
+}
+
+/* Hover / focus (keyboard accessible) */
+.social-icon:hover,
+.social-icon:focus,
+.social-icon:focus-visible {
+  transform: scale(1.18);            /* zoom-in amount */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  opacity: 1;
+  outline: none;
+}
+
+/* Optional: small press feedback */
+.social-icon:active {
+  transform: scale(0.98);
+  transition-duration: 120ms;
+}
+
+/* Smaller icons on very small screens (optional) */
+@media (max-width: 420px) {
+  .social-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+}
