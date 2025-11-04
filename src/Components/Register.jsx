@@ -43,11 +43,11 @@ const Register = () => {
   });
   const navigate = useNavigate(); // 👈 instance banaya
   const RegisterData = async (data) => {
-    console.log("Form Data:", data);
+    // console.log("Form Data:", data);
     try {
       const res = await axios.post(`${BASE_URL}/reg`, data);
 
-      console.log("✅ Server Response:", res.data);
+      // console.log("✅ Server Response:", res.data);
       navigate("/login");
       if (res?.data?.success) {
         Swal.fire({
@@ -69,7 +69,7 @@ const Register = () => {
         // reset();
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       Swal.fire({
         icon: "error",
         title: "Server Error!",

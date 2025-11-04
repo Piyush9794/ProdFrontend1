@@ -85,9 +85,9 @@ export default function Home() {
             Manage your products easily — Add, Edit, Delete and track your items
             in one place.
           </p>
-          <a href="/login" className="btn btn-primary btn-lg mt-3">
+          <Link to="/login" className="btn btn-primary btn-lg mt-3">
             ➕ Add New Product
-          </a>
+          </Link>
         </div>
       </header>
       <PortfolioSectionWithIcons />

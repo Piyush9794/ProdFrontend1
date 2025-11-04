@@ -1,5 +1,6 @@
 import React from "react";
 import { useAuth } from "../context/AuthContext";
+import { Link } from "react-router-dom";
 import {
   FaHome,
   FaPlusCircle,
@@ -17,7 +18,7 @@ const NavBar = () => {
 
   const handleLogout = () => {
     logout();
-    window.location.href = "/login";
+    window.location. to = "/login";
   };
 
   return (
@@ -29,13 +30,13 @@ const NavBar = () => {
         }}
       >
         <div className="container">
-          <a
+          <Link
             className="navbar-brand fw-bold d-flex align-items-center gap-2"
-            href="/"
+             to="/"
           >
             <IoCartOutline size={28} />
             ProductManager
-          </a>
+          </Link>
 
           <button
             className="navbar-toggler"
@@ -49,39 +50,39 @@ const NavBar = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto align-items-lg-center">
               <li className="nav-item mx-1">
-                <a
+                <Link
                   className="nav-link active d-flex align-items-center gap-1"
-                  href="/"
+                   to="/"
                 >
                   <FaHome /> Home
-                </a>
+                </Link>
               </li>
 
               <li className="nav-item mx-1">
-                <a
+                <Link
                   className="nav-link d-flex align-items-center gap-1 text-white"
-                  href="/AddProduct"
+                   to="/AddProduct"
                 >
                   <FaPlusCircle /> Add Product
-                </a>
+                </Link>
               </li>
 
               <li className="nav-item mx-1">
-                <a
+                <Link
                   className="nav-link d-flex align-items-center gap-1 text-white"
-                  href="/ViewProducts"
+                   to="/ViewProducts"
                 >
                   <FaBoxOpen /> My Products
-                </a>
+                </Link>
               </li>
 
               {/* Conditional Rendering based on login status */}
               {isLoggedIn ? (
                 <>
                   <li className="nav-item dropdown mx-1">
-                    <a
+                    <Link
                       className="nav-link dropdown-toggle d-flex align-items-center gap-1"
-                      href="#"
+                       to="#"
                       id="navbarDropdown"
                       role="button"
                       data-bs-toggle="dropdown"
@@ -89,23 +90,23 @@ const NavBar = () => {
                     >
                       <FaUserCircle size={18} />
                       <span className="text-white">Hi, {user?.name}</span>
-                    </a>
+                    </Link>
                     <ul className="dropdown-menu dropdown-menu-end">
                       <li>
-                        <a
+                        <Link
                           className="dropdown-item d-flex align-items-center gap-2"
-                          href="/profile"
+                           to="/profile"
                         >
                           <FaUserCircle /> Profile
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
+                        <Link
                           className="dropdown-item d-flex align-items-center gap-2"
-                          href="/settings"
+                           to="/settings"
                         >
                           <FaCog /> Settings
-                        </a>
+                        </Link>
                       </li>
                       <li>
                         <hr className="dropdown-divider" />
@@ -124,20 +125,20 @@ const NavBar = () => {
               ) : (
                 <>
                   <li className="nav-item mx-1">
-                    <a
+                    <Link
                       className="btn btn-light btn-sm d-flex align-items-center gap-2  "
-                      href="/login"
+                       to="/login"
                     >
                       <FaSignInAlt /> Login
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item mx-1">
-                    <a
+                    <Link
                       className="btn btn-light btn-sm d-flex align-items-center gap-2"
-                      href="/Register"
+                       to="/Register"
                     >
                       <FaUserPlus /> Signup
-                    </a>
+                    </Link>
                   </li>
                 </>
               )}

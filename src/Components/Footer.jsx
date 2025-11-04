@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -30,18 +31,18 @@ const Footer = () => {
 
             {/* Social Icons */}
             <div className="footer-social">
-              <a href="#" className="social-icon" aria-label="Twitter">
+              <Link to="#" className="social-icon" aria-label="Twitter">
                 <FaTwitter />
-              </a>
-              <a href="#" className="social-icon" aria-label="LinkedIn">
+              </Link>
+              <Link  to="#" className="social-icon" aria-label="LinkedIn">
                 <FaLinkedin />
-              </a>
-              <a href="#" className="social-icon" aria-label="Instagram">
+              </Link>
+              <Link  to="#" className="social-icon" aria-label="Instagram">
                 <FaInstagram />
-              </a>
-              <a href="#" className="social-icon" aria-label="Facebook">
+              </Link>
+              <Link  to="#" className="social-icon" aria-label="Facebook">
                 <FaFacebook />
-              </a>
+              </Link>
             </div>
 
             {/* Back to Top Button */}
@@ -61,39 +62,39 @@ const Footer = () => {
             <h6 className="fw-bold mb-3">Site Map</h6>
             <ul className="list-unstyled text-white-50 small">
               <li className="mb-2">
-                <a href="#" className="text-decoration-none text-white ">
+                <Link  to="#" className="text-decoration-none text-white ">
                   Homepage
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a href="#" className="text-decoration-none text-white ">
+                <Link  to="#" className="text-decoration-none text-white ">
                   Technology
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a href="#" className="text-decoration-none text-white ">
+                <Link  to="#" className="text-decoration-none text-white ">
                   Ataraxis Breast
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a href="#" className="text-decoration-none text-white ">
+                <Link to="#" className="text-decoration-none text-white ">
                   Resources & News
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a href="#" className="text-decoration-none text-white ">
+                <Link to="#" className="text-decoration-none text-white ">
                   Careers
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a href="#" className="text-decoration-none text-white ">
+                <Link to="#" className="text-decoration-none text-white ">
                   Contact Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-decoration-none text-white ">
+                <Link to="#" className="text-decoration-none text-white ">
                   Portal
-                </a>
+                </Link>
               </li>
             </ul>
           </Col>
@@ -103,19 +104,19 @@ const Footer = () => {
             <h6 className="fw-bold mb-3">Legal</h6>
             <ul className="list-unstyled text-white small">
               <li className="mb-2">
-                <a href="#" className="text-decoration-none text-white ">
+                <Link to="#" className="text-decoration-none text-white ">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a href="#" className="text-decoration-none text-white ">
+                <Link to="#" className="text-decoration-none text-white ">
                   Terms of Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-decoration-none text-white ">
+                <Link to="#" className="text-decoration-none text-white ">
                   Lawyer’s Corner
-                </a>
+                </Link>
               </li>
             </ul>
           </Col>
