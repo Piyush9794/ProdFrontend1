@@ -100,7 +100,7 @@ export default function ViewProducts() {
         });
       }
     } catch (error) {
-      console.error("Error deleting product:", error);
+      // console.error("Error deleting product:", error);
       Swal.fire({
         icon: "error",
         title: "Something went wrong!",
@@ -148,7 +148,7 @@ export default function ViewProducts() {
         });
       }
     } catch (error) {
-      console.error("Error updating product:", error);
+      // console.error("Error updating product:", error);
       Swal.fire({
         icon: "error",
         title: "Server Error ⚠️",

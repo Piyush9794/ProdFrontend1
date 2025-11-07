@@ -9,7 +9,7 @@ const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 export default function AddProduct() {
   const { user } = useAuth(); // 👈 ye user ka email dega
-  console.log("+++++++++++++++", user);
+  // console.log("+++++++++++++++", user);
   const [preview, setPreview] = useState(null);
 
   // ✅ React Hook Form initialization
@@ -31,7 +31,7 @@ export default function AddProduct() {
 
   const onSubmit = async (data) => {
     try {
-      console.log("📦 Product Data:", data);
+      // console.log("📦 Product Data:", data);
 
       // ✅ Create FormData
       const formData = new FormData();
@@ -66,7 +66,7 @@ export default function AddProduct() {
         });
       }
     } catch (error) {
-      console.error("Error adding product:", error);
+      // console.error("Error adding product:", error);
       Swal.fire({
         icon: "error",
         title: "Server Error ⚠️",
